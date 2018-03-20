@@ -1,0 +1,59 @@
+{
+  "aug": {
+    "action": {
+      "operations": [
+        {
+          "paths": {
+            "store.rookout.traceback": "stack.traceback()",
+            "store.rookout.exception.string": "utils.exception_string()",
+            "store.rookout.exception.type": "utils.exception_type()",
+            "store.rookout.frame": "frame.dump()",
+            "store.rookout.exception.value": "utils.exception()"
+          },
+          "name": "set"
+        }
+      ],
+      "name": "script"
+    },
+    "location": {
+      "lineno": null,
+      "sha256": null,
+      "name": "file_line",
+      "filename": null
+    }
+  },
+  "processing": {
+    "operations": [
+      {
+        "path": "temp.message",
+        "name": "format",
+        "format": "{machine.ip}: {store.rookout.frame.filename}@{store.rookout.frame.line}-{store.rookout.frame.function}"
+      },
+      {
+        "message": "temp.message",
+        "name": "gelf",
+        "target": {
+          "transport": "udp",
+          "host": "127.0.0.1",
+          "port": 12201
+        }
+      }
+    ]
+  },
+  "appearance": {
+    "color": "#F69353",
+    "icon": "icon-goto",
+    "title": "Log to GELF/UDP"
+  },
+  "selector": {
+    "operations": [
+      {
+        "path": {
+          "path": "True",
+          "name": "calc"
+        },
+        "name": "return"
+      }
+    ]
+  }
+}
