@@ -7,7 +7,7 @@ application to a [Slack] channel.
 
 1. Start by making sure you have a Slack token in order to use this rule.
 If you do not already have a token, you can generate one here by clicking on `Create Token`:
-(https://api.slack.com/custom-integrations/legacy-tokens)[https://api.slack.com/custom-integrations/legacy-tokens]
+[https://api.slack.com/custom-integrations/legacy-tokens](https://api.slack.com/custom-integrations/legacy-tokens)
 
 1. On the Rookout management interface, in the Rules pane, from the "Rule Actions"
 drop down, select "Create New Template".
