@@ -19,10 +19,10 @@ You can edit this as you wish to select where to send the alerts and to add a cu
 1. Paste your Slack token you generated on line 14 instead of `YOUR_TOKEN`.
 
 1. Edit configuration as needed
-    | Line | Attribute |                     Description                     |
-    |:----:|:---------:|:---------------------------------------------------:|
-    |   7  |   format  |   Template describing what info the log will send   |
-    |  12  |  channel  | Slack channel name you want the messages to be sent |
+| Line | Attribute |                     Description                     |
+|:----:|:---------:|:---------------------------------------------------:|
+|   7  |   format  |   Template describing what info the log will send   |
+|  12  |  channel  | Slack channel name you want the messages to be sent |
 
 1. Save the template by clicking the save icon next to its title in the file explorer
 
