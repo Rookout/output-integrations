@@ -14,6 +14,8 @@ Collect [custom metrics](https://docs.datadoghq.com/getting_started/custom_metri
 * Have a new custom metric but you didn’t create the instrumentation to collect it? Not a problem. Rookout can collect custom metrics ad-hoc.
 * Datadog Pro customers are allotted 100 custom metrics per host & Enterprise customers are allotted 200 custom metrics per host. More will incur billing charges.
 
+You can find Rookout's integration on [Datadog's integrations page](https://docs.datadoghq.com/integrations/rookout/)
+
 ## Setup
 ### Installation
 Rookout sends data to Datadog via the DogstatsD service available from the Datadog agent.
