@@ -23,7 +23,7 @@ Rookout sends data to SumoLogic via the HTTP POST.
 
 2. Setup [Rookout][rookout-url]
 
-3. Log into [Rookout's webapp](https://app.rookout.com)
+3. Log into [Rookout's webapp][rookout-app-url]
 
 1. In the right panel (Rules) click on the menu button
 
@@ -45,13 +45,14 @@ Rookout sends data to SumoLogic via the HTTP POST.
 
 ### Configuration
 
-Once you added the rule, you can replace the url to another SumoLogic endpoint
+Once you added the rule, you can replace the `url` to another SumoLogic endpoint   
+Change the `items` dictionary to output any information that you need to send
 
 ```json
 {
     "name": "sumologic",
     "target": {
-      "url": "PLACE YOUR SUMOLOGIC ENDPOINT IN HERE!"
+      "url": "PLACE YOUR SUMOLOGIC ENDPOINT IN HERE"
     },
     "items": {
       "function": "store.rookout.frame.function",
@@ -70,4 +71,5 @@ Find out more at [https://docs.rookout.com][rookout-docs]
 [rookout-image]: logos/avatars-bot.png
 [rookout-url]: https://docs.rookout.com/docs/getting-started.html
 [rookout-docs]: https://docs.rookout.com/
+[rookout-app-url]: https://app.rookout.com
 [sumo-logic-url]: https://www.sumologic.com/
