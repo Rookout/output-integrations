@@ -1,0 +1,52 @@
+{
+  "appearance": {
+    "color": "#91C7FF",
+    "icon": "fa  fa-plus-square",
+    "title": "SumoLogic"
+  },
+  "selector": {
+    "operations": [
+      {
+        "name": "return",
+        "path": {
+          "name": "calc",
+          "path": "True"
+        }
+      }
+    ]
+  },
+  "aug": {
+    "location": {
+      "name": "file_line",
+      "filename": null,
+      "lineno": null,
+      "sha256": null
+    },
+    "action": {
+      "name": "script",
+      "operations": [
+        {
+          "name": "set",
+          "paths": {
+            "store.rookout.frame": "frame.dump()"
+          }
+        }
+      ]
+    }
+  },
+  "processing": {
+    "operations": [
+      {
+        "name": "sumologic",
+        "target": {
+          "url": "https://[SumoEndpoint]/receiver/v1/http/[UniqueHTTPCollectorCode]"
+        },
+        "items": {
+          "function": "store.rookout.frame.function",
+          "filename": "store.rookout.frame.filename",
+          "line": "store.rookout.frame.line"
+        }
+      }
+    ]
+  }
+}
