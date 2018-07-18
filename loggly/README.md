@@ -38,7 +38,7 @@ Rookout sends data to Loggly via a HTTP Webhook.
 
 ### Configuration
 
-Once you added the rule, you can replace the `url` to another Loggly endpoint
+Once you added the rule, you can replace the `url` to another Loggly endpoint  
 Change the `items` dictionary to output any information that you need to send
 
 ```json
