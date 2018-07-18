@@ -1,0 +1,60 @@
+{
+  "appearance": {
+    "title": "Dump Frame to Elastic",
+    "icon": "fa fa-table",
+    "color": "#FFF365"
+  },
+  "selector": {
+    "operations": [
+      {
+        "name": "return",
+        "path": {
+          "name": "calc",
+          "path": "True"
+        }
+      }
+    ]
+  },
+  "aug": {
+    "location": {
+      "name": "file_line",
+      "filename": null,
+      "lineno": null,
+      "sha256": null
+    },
+    "action": {
+      "name": "script",
+      "operations": [
+        {
+          "name": "set",
+          "paths": {
+            "store.rookout.frame": "frame.dump()"
+          }
+        }
+      ]
+    }
+  },
+  "processing": {
+    "operations": [
+      {
+        "name": "elastic",
+        "target": {
+          "hosts": [
+            "elastic"
+          ]
+        },
+        "index": "rookout",
+        "type": "frame_dump",
+        "items": {
+          "function": "store.rookout.frame.function",
+          "filename": "store.rookout.frame.filename",
+          "line": "store.rookout.frame.line",
+          "user": "store.rookout.frame.locals.self.user",
+          "user_ip": "store.rookout.frame.locals.self.user_ip",
+          "forum": "store.rookout.frame.locals.self.forum",
+          "topic": "store.rookout.frame.locals.self.topic"
+        }
+      }
+    ]
+  }
+}
