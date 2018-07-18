@@ -1,0 +1,54 @@
+{
+  "appearance": {
+    "color": "#91C7FF",
+    "icon": "fa fa-commenting",
+    "title": "Loggly Log Rule"
+  },
+  "selector": {
+    "operations": [
+      {
+        "name": "return",
+        "path": {
+          "name": "calc",
+          "path": "True"
+        }
+      }
+    ]
+  },
+  "aug": {
+    "location": {
+      "name": "file_line",
+      "filename": null,
+      "lineno": null,
+      "sha256": null
+    },
+    "action": {
+      "name": "script",
+      "operations": [
+        {
+          "name": "set",
+          "paths": {
+            "store.rookout.frame.function": "frame.function()",
+            "store.rookout.frame.filename": "frame.filename()",
+            "store.rookout.frame.line": "frame.line()"
+          }
+        }
+      ]
+    }
+  },
+  "processing": {
+    "operations": [
+      {
+        "name": "web_hook",
+        "target": {
+          "url": "http://logs-01.loggly.com/inputs/<YOUR_TOKEN>/tag/http/"
+        },
+        "items": {
+          "function": "store.rookout.frame.function",
+          "filename": "store.rookout.frame.filename",
+          "line": "store.rookout.frame.line"
+        }
+      }
+    ]
+  }
+}
