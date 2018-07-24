@@ -31,5 +31,5 @@ the line in the code you wish to use this rule one.
 
 __For more information on Rule Scripting (check out our documentation)[https://rookout.github.io/scripts/index.md]__
 
-[Slack]: https://sentry.io/
+[Sentry]: https://sentry.io/
 [Rookout]: https://rookout.github.io
