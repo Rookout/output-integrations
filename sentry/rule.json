@@ -1,0 +1,56 @@
+{
+    "processing": {
+      "operations": [
+        {
+          "path": "temp.message",
+          "name": "format",
+          "format": "Alert! {machine.ip}: {store.rookout.frame.filename}@{store.rookout.frame.line}-{store.rookout.frame.function}"
+        },
+        {
+          "message": "temp.message",
+          "name": "sentry",
+          "dsn": "YOUR_DSN",
+          "tags": {
+            "INSERT_OPTIONAL_TAG": "INSERT_OPTIONAL_TAG_VALUE"
+          }
+        }
+      ]
+    },
+    "appearance": {
+      "color": "red300",
+      "icon": "icon-sentry",
+      "title": "Alert to Sentry"
+    },
+    "aug": {
+      "action": {
+        "operations": [
+          {
+            "paths": {
+              "store.rookout.frame.line": "frame.line()",
+              "store.rookout.frame.function": "frame.function()",
+              "store.rookout.frame.filename": "frame.filename()"
+            },
+            "name": "set"
+          }
+        ],
+        "name": "script"
+      },
+      "location": {
+        "sha256": null,
+        "lineno": null,
+        "name": "file_line",
+        "filename": null
+      }
+    },
+    "selector": {
+      "operations": [
+        {
+          "path": {
+            "path": "True",
+            "name": "calc"
+          },
+          "name": "return"
+        }
+      ]
+    }
+  }
