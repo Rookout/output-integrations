@@ -18,7 +18,7 @@
     },
     "appearance": {
       "color": "red300",
-      "icon": "fa fa-slack",
+      "icon": "icon-sentry",
       "title": "Alert to Sentry"
     },
     "aug": {
