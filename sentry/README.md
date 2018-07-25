@@ -29,7 +29,7 @@ the line in the code you wish to use this rule one.
 
 1. Check that the messages have arrived to your Sentry.
 
-__For more information on Rule Scripting (check out our documentation)[https://rookout.github.io/scripts/index.md]__
+__For more information on Rule Scripting [check out our documentation](https://docs.rookout.com/docs/rules.html)__
 
 [Sentry]: https://sentry.io/
-[Rookout]: https://rookout.github.io
+[Rookout]: https://docs.rookout.com/
