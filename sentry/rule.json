@@ -2,16 +2,9 @@
     "processing": {
       "operations": [
         {
-          "path": "temp.message",
-          "name": "format",
-          "format": "Alert! {machine.ip}: {store.rookout.frame.filename}@{store.rookout.frame.line}-{store.rookout.frame.function}"
-        },
-        {
-          "message": "temp.message",
           "name": "sentry",
-          "dsn": "YOUR_DSN",
-          "tags": {
-            "INSERT_OPTIONAL_TAG": "INSERT_OPTIONAL_TAG_VALUE"
+          "target": {
+            "url": "YOUR_DSN"
           }
         }
       ]
@@ -25,12 +18,14 @@
       "action": {
         "operations": [
           {
-            "paths": {
-              "store.rookout.frame.line": "frame.line()",
-              "store.rookout.frame.function": "frame.function()",
-              "store.rookout.frame.filename": "frame.filename()"
-            },
-            "name": "set"
+            "name": "set",
+			"paths": {
+				"store.rookout.frame": "frame.dump()",
+				"store.rookout.traceback": "stack.traceback()",
+				"store.rookout.exception.type": "python.exception_type()",
+				"store.rookout.exception.value": "python.exception()",
+				"store.rookout.exception.string": "python.exception_string()"
+			}
           }
         ],
         "name": "script"
