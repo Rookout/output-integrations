@@ -11,7 +11,7 @@ If you do not already have a key, you can fetch it from Settings > sentry > PROJ
 1. On the Rookout management interface, in the Rules pane, from the "Rule Actions"
 drop down, select "Create New Template".
 
-1. Copy and replace the contents of rule.json to the template editor.
+1. Copy and replace the contents of (node\python)_rule.json to the template editor.
 
 1. Paste your Sentry DSN path you generated on line 12 instead of `YOUR_DSN`.
 
