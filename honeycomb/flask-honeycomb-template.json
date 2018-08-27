@@ -1,0 +1,54 @@
+{
+  "appearance": {
+    "color": "#91C7FF",
+    "icon": "fa  fa-commenting",
+    "title": "Flask-Honeycomb-Example"
+  },
+  "processing": {
+    "operations": [
+      {
+        "name": "web_hook",
+        "target": {
+          "url": "https://api.honeycomb.io/1/events/<DATASET_NAME>"
+        },
+        "customHeaders": {
+          "X-Honeycomb-Team": "<YOUR_API_KEY>"
+        },
+        "items": {
+          "status_code": "store.rookout.http.status_code",
+          "method": "store.rookout.http.method",
+          "duration": "store.rookout.http.duration",
+          "url": "store.rookout.http.url",
+          "remote_host": "store.rookout.http.remote_host"
+        }
+      }
+    ]
+  },
+  "aug": {
+    "location": {
+      "name": "http_server"
+    },
+    "action": {
+      "name": "script",
+      "operations": [
+        {
+          "name": "set",
+          "paths": {
+            "store.rookout.http": "extracted"
+          }
+        }
+      ]
+    }
+  },
+  "selector": {
+    "operations": [
+      {
+        "path": {
+          "path": "True",
+          "name": "calc"
+        },
+        "name": "return"
+      }
+    ]
+  }
+}
