@@ -1,0 +1,63 @@
+{
+  "appearance": {
+    "color": "#91C7FF",
+    "icon": "fa  fa-commenting",
+    "title": "Coralogix-Example"
+  },
+  "processing": {
+    "operations": [
+      {
+        "name": "coralogix",
+        "target": {
+          "url": "https://api.coralogix.com/api/v1/logs",
+          "coralogix": {
+            "privateKey": "YOUR_PRIVATE_KEY",
+            "applicationName": "rook.executable",
+            "subsystemName": "rook.platform",
+            "computerName": "rook.hostname"
+          },
+          "logEntry": {
+            "severity": "2",
+            "text": "INSERT_TEXT",
+            "category": "INSERT_CATEGORY",
+            "className": "store.rookout.frame.filename",
+            "methodName": "store.rookout.frame.function",
+            "threadId": "4"
+          }
+        }
+      }
+    ]
+  },
+  "aug": {
+    "location": {
+      "name": "file_line",
+      "filename": null,
+      "lineno": null,
+      "sha256": null
+    },
+    "action": {
+      "name": "script",
+      "operations": [
+        {
+          "name": "set",
+          "paths": {
+            "store.rookout.frame.function": "frame.function()",
+            "store.rookout.frame.filename": "frame.filename()",
+            "store.rookout.frame.line": "frame.line()"
+          }
+        }
+      ]
+    }
+  },
+  "selector": {
+    "operations": [
+      {
+        "path": {
+          "path": "True",
+          "name": "calc"
+        },
+        "name": "return"
+      }
+    ]
+  }
+}
