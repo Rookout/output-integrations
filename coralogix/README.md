@@ -51,15 +51,15 @@ Change the YOUR_PRIVATE_KEY to your private key, and edit the text keys as your 
             "privateKey": "YOUR_PRIVATE_KEY",
             "applicationName": "rook.executable",
             "subsystemName": "rook.platform",
-            "computerName": "rook.hostname"
+            "computerName": "rook.hostname",
+            "IPAddress": "rook.ip"
           },
           "logEntry": {
             "severity": "2",
             "text": "INSERT_TEXT",
             "category": "INSERT_CATEGORY",
             "className": "store.rookout.frame.filename",
-            "methodName": "store.rookout.frame.function",
-            "threadId": "4"
+            "methodName": "store.rookout.frame.function"
           }
         }
       }
