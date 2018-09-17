@@ -1,5 +1,5 @@
 ---
-title: Loggly-Rookout Integration
+title: Fluentd-Rookout Integration
 integration_title: Rookout
 kind: integration
 git_integration_title: Rookout
