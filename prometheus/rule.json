@@ -1,0 +1,67 @@
+{
+    "id": "df3a5762c740406e846c0d0d8c026b29",
+    "template_id": "ROOKOUT_LOG_TEMPLATE",
+    "appearance": {
+      "color": "#91C7FF",
+      "icon": "fa  fa-commenting",
+      "title": "Log - Rookout"
+    },
+    "selector": {
+      "operations": [
+        {
+          "name": "return",
+          "path": {
+            "name": "calc",
+            "path": "True"
+          }
+        }
+      ]
+    },
+    "workspace": "585b48b0922f4f45bf9a4025d7f032df",
+    "aug": {
+      "id": "df3a5762c740406e846c0d0d8c026b29",
+      "location": {
+        "name": "file_line",
+        "filename": "server.js",
+        "lineno": 11,
+        "sha256": "5df8d1e6d3c4261c29f4d21cd6fd6ac416ee0185ae94705078b13e9d87b0048c"
+      },
+      "action": {
+        "name": "script",
+        "operations": [
+          {
+            "name": "set",
+            "paths": {
+              "store.rookout.frame.function": "frame.function()",
+              "store.rookout.frame.filename": "frame.filename()",
+              "store.rookout.frame.line": "frame.line()",
+              "store.x": "frame.x"
+            }
+          }
+        ]
+      }
+    },
+    "processing": {
+      "operations": [
+        {
+          "name": "format",
+          "path": "temp.message",
+          "format": "LOG: {agent.ip}: {store.rookout.frame.filename}@{store.rookout.frame.line}-{store.rookout.frame.function}"
+        },
+        {
+          "name": "prometheus",
+          "url": "http://localhost:9091",
+          "job": "meter",
+          "metrics": {
+            "x": "store.x"
+          }
+        },
+        {
+          "name": "send_rookout",
+          "path": "temp.message"
+        }
+      ]
+    },
+    "c_time": "2018-09-17T15:22:14.765183+00:00",
+    "indicator": "Error"
+  }
