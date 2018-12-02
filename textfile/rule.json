@@ -1,5 +1,4 @@
 {
-  "id": null,
   "new_rule_id": null,
   "template_id": null,
   "appearance": {
@@ -20,7 +19,6 @@
   },
   "workspace": null,
   "aug": {
-    "id": null,
     "location": {
       "name": "file_line",
       "filename": null,
