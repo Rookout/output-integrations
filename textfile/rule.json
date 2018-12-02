@@ -1,0 +1,65 @@
+{
+  "new_rule_id": null,
+  "template_id": null,
+  "appearance": {
+    "color": "blue700",
+    "icon": "fa fa-file-o",
+    "title": "Write to File"
+  },
+  "selector": {
+    "operations": [
+      {
+        "name": "return",
+        "path": {
+          "name": "calc",
+          "path": "True"
+        }
+      }
+    ]
+  },
+  "workspace": null,
+  "aug": {
+    "location": {
+      "name": "file_line",
+      "filename": null,
+      "sourcePath": null,
+      "sourceRepo": null,
+      "lineno": null,
+      "sha256": null,
+      "includeExternals": false
+    },
+    "action": {
+      "name": "script",
+      "operations": [
+        {
+          "name": "set",
+          "paths": {
+            "store.rookout.frame.function": "frame.function()",
+            "store.rookout.frame.filename": "frame.filename()",
+            "store.rookout.frame.line": "frame.line()"
+          }
+        }
+      ]
+    }
+  },
+  "processing": {
+    "operations": [
+      {
+        "name": "format",
+        "path": "temp.message",
+        "format": "LOG: {agent.ip}: {store.rookout.frame.filename}@{store.rookout.frame.line}-{store.rookout.frame.function}"
+      },
+      {
+        "name": "text_file",
+        "target": {
+          "path": "/var/log/rookout_log.txt",
+          "buffering": 0
+        },
+        "message": "temp.message"
+      }
+    ]
+  },
+  "c_time": null,
+  "indicator_state": "Active",
+  "indicator_warning": false
+}
