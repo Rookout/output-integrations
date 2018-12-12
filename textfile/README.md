@@ -1,7 +1,7 @@
 # Rookout + Text File
 
-The [Rookout] agent can be configured to send notifications arriving from your
-application to a text file where the [Rookout Agent](https://docs.rookout.com/docs/agent-setup.html) is running.
+[Rookout] can be configured to send notifications arriving from your application to a text file.
+ The text file will be located where [Rookout ETL Agent](https://docs.rookout.com/docs/agent-setup.html) is running.
 
 ## Setup
 

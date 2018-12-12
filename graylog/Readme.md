@@ -1,7 +1,6 @@
 # Rookout + Graylog
 
-The [Rookout] agent can be configured to send notifications arriving from your
-application to a [Graylog] input.
+[Rookout] can be configured to send notifications arriving from your application to a [Graylog] input.
 
 ## Setup
 

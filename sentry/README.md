@@ -1,7 +1,6 @@
 # Rookout + Sentry
 
-The [Rookout] agent can be configured to send notifications arriving from your
-application to a [Sentry] project.
+[Rookout] can be configured to send notifications arriving from your application to a [Sentry] project.
 
 ## Setup
 

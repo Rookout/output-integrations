@@ -1,7 +1,6 @@
 # Rookout + Slack
 
-The [Rookout] agent can be configured to send notifications arriving from your
-application to a [Slack] channel.
+[Rookout] can be configured to send notifications arriving from your application to a [Slack] channel.
 
 ## Setup
 
