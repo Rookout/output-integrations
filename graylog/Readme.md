@@ -19,15 +19,15 @@ select the kind of input you would like to set up. Currently, Rookout only
 supports `GELF UDP` and press `Launch new input`. Choose a node, a title,
 and also which port to use. Click `Save`.
 
-3. On the Rookout management interface, in the Rules pane, from the "Rule Actions"
+3. On the Rookout management interface, in the Breakpoints pane, from the "Breakpoint Actions"
 drop down, select "Create New Template".
 
 4. Copy the contents of rule.json to the template editor. Note the target
 parameters on line 38, and the message to log on line 33. You can edit this as
 you wish, using data from your app (see general documentation).
 
-5. Select your new template from the "Rule type" drop down, and click next to
-the line in the code you wish to use this rule one.
+5. Select your new template from the "Breakpoint type" drop down, and click next to
+the line in the code you wish to use this Breakpoint one.
 
 6. Check that the messages have arrived to your Graylog server.
 

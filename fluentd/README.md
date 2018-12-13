@@ -18,26 +18,26 @@ Rookout sends data to Fluentd via a HTTP Webhook.
 
 3. Log into [Rookout's webapp][rookout-app-url]
 
-1. In the right panel (Rules) click on the menu button
+1. In the right panel (Breakpoints) click on the menu button
 
-    ![Rule actions menu](screenshots/click_rule_action.png)
+    ![Breakpoint actions menu](screenshots/click_rule_action.png)
 
-1. Click on *Create new template* in order to edit a new rule template
+1. Click on *Create new template* in order to edit a new Breakpoint template
 
     ![Create new template button](screenshots/click_new_template.png)
 
-1. Copy the Fluentd rule template [available here](rule-template.json) into the editor and replace the default rule template.
+1. Copy the Fluentd Breakpoint template [available here](rule-template.json) into the editor and replace the default Breakpoint template.
 
 
 1. Click the save icon to save the template
 
     ![Click Save Icon](screenshots/click_save.png)
 
-1. Add the newly created rule to any application as you would normally !
+1. Add the newly created Breakpoint to any application as you would normally !
 
 ### Configuration
 
-Once you added the rule, you can replace the `url` to another Fluentd endpoint  
+Once you added the Breakpoint, you can replace the `url` to another Fluentd endpoint  
 Change the `items` dictionary to output any information that you need to send
 
 ```json
