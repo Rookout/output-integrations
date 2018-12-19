@@ -1,5 +1,5 @@
 {
-    "logo_filename": "datadog.svg",
+    "logo_filename": "datadog.png",
     "summary": "Add a custom Rookout tile to your Datadog Dashboard in minutes",
     "website": "https://docs.datadoghq.com/integrations/rookout/"
 }
