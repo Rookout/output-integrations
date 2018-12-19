@@ -1,7 +1,7 @@
 {
   "appearance": {
     "color": "#91C7FF",
-    "icon": "fa  fa-plus-square",
+    "icon": "fa fa-plus-square",
     "title": "SumoLogic"
   },
   "selector": {
@@ -37,7 +37,7 @@
   "processing": {
     "operations": [
       {
-        "name": "sumologic",
+        "name": "webhook",
         "target": {
           "url": "https://[SumoEndpoint]/receiver/v1/http/[UniqueHTTPCollectorCode]"
         },
