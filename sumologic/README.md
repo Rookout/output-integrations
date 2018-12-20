@@ -11,9 +11,9 @@ git_integration_title: Rookout
 
 ### Installation
 
-Rookout sends data to SumoLogic via the HTTP POST.
+Rookout sends data to SumoLogic via HTTP POST.
 
-1. Setup a HTTP End point in [Sumlogic][sumo-logic-url]
+1. Setup a HTTP End point in [Sumologic][sumo-logic-url]
 - Login / Register to SumoLogic
 - Enter the Setup Wizard
 - Enter `Set Up Streaming Data`
@@ -35,7 +35,7 @@ Rookout sends data to SumoLogic via the HTTP POST.
 
 1. Copy the Sumo Logic Breakpoint template [available here](rule-template.json) into the editor and replace the default Breakpoint template.
 
-    ![SumoLogic Custom Metric Breakpoint template](screenshots/sumologic_rule_template.png)
+    ![SumoLogic Custom Metric Breakpoint template](screenshots/sumologic_template.png)
 
 1. Click the save icon to save the template
 
@@ -50,7 +50,7 @@ Change the `items` dictionary to output any information that you need to send
 
 ```json
 {
-    "name": "sumologic",
+    "name": "webhook",
     "target": {
       "url": "PLACE YOUR SUMOLOGIC ENDPOINT IN HERE"
     },
