@@ -37,7 +37,7 @@
   "processing": {
     "operations": [
       {
-        "name": "webhook",
+        "name": "web_hook",
         "target": {
           "url": "https://[SumoEndpoint]/receiver/v1/http/[UniqueHTTPCollectorCode]"
         },
