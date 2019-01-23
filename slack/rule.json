@@ -4,7 +4,7 @@
         {
           "path": "temp.message",
           "name": "format",
-          "format": "Alert! {machine.ip}: {store.rookout.frame.filename}@{store.rookout.frame.line}-{store.rookout.frame.function}"
+          "format": "Alert! {agent.ip}: {store.rookout.frame.filename}@{store.rookout.frame.line}-{store.rookout.frame.function}"
         },
         {
           "message": "temp.message",
