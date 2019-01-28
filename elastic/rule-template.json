@@ -49,7 +49,7 @@
         "items": {
           "function": "store.rookout.frame.function",
           "filename": "store.rookout.frame.filename",
-          "line": "store.rookout.frame.line",
+          "line": "store.rookout.frame.line"
         }
       }
     ]
