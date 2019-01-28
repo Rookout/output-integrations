@@ -47,6 +47,9 @@ Change the `items` dictionary to output any information that you need to send
         "target": {
           "url": "YOUR_FLUENTD_HTTP_INTEGRATION_ENDPOINT"
         },
+        "customHeaders":{
+          "content-type":"application/json"
+        },
         "items": {
           "function": "store.rookout.frame.function",
           "filename": "store.rookout.frame.filename",

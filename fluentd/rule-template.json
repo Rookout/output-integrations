@@ -1,4 +1,5 @@
 {
+  "template_type": "Json",
   "appearance": {
     "color": "#91C7FF",
     "icon": "fa fa-commenting",
@@ -42,6 +43,9 @@
         "name": "web_hook",
         "target": {
           "url": "YOUR_FLUENTD_HTTP_INTEGRATION_ENDPOINT"
+        },
+        "customHeaders":{
+          "content-type":"application/json"
         },
         "items": {
           "function": "store.rookout.frame.function",

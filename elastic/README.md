@@ -53,11 +53,7 @@ Change the `items` dictionary to output any information that you need to send
         "items": {
           "function": "store.rookout.frame.function",
           "filename": "store.rookout.frame.filename",
-          "line": "store.rookout.frame.line",
-          "user": "store.rookout.frame.locals.self.user",
-          "user_ip": "store.rookout.frame.locals.self.user_ip",
-          "forum": "store.rookout.frame.locals.self.forum",
-          "topic": "store.rookout.frame.locals.self.topic"
+          "line": "store.rookout.frame.line"
         }
       }
     ]

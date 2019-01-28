@@ -1,4 +1,5 @@
 {
+  "template_type": "Custom",
   "appearance": {
     "color": "#91C7FF",
     "icon": "fa  fa-commenting",
