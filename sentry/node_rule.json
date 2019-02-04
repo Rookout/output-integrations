@@ -1,5 +1,5 @@
 {
-    "template_type": "Dump",
+    "template_type": "Custom",
     "processing": {
       "operations": [
         {

@@ -1,5 +1,5 @@
 {
-  "template_type": "Json",
+  "template_type": "Dump",
   "appearance": {
     "color": "#91C7FF",
     "icon": "fa fa-plus-square",
@@ -29,7 +29,10 @@
         {
           "name": "set",
           "paths": {
-            "store.rookout.frame": "frame.dump()"
+            "store.rookout.frame.function": "frame.function()",
+            "store.rookout.frame.filename": "frame.filename()",
+            "store.rookout.frame.line": "frame.line()",
+            "store.rookout.frame.locals": "frame.locals()"
           }
         }
       ]
@@ -45,7 +48,9 @@
         "items": {
           "function": "store.rookout.frame.function",
           "filename": "store.rookout.frame.filename",
-          "line": "store.rookout.frame.line"
+          "line": "store.rookout.frame.line",
+          "locals": "store.rookout.frame.locals",
+          "variables": "store.rookout.variables"
         }
       }
     ]

@@ -49,17 +49,19 @@ Once you added the Breakpoint, you can replace the `url` to another SumoLogic en
 Change the `items` dictionary to output any information that you need to send
 
 ```json
-{
-    "name": "webhook",
-    "target": {
-      "url": "PLACE YOUR SUMOLOGIC ENDPOINT IN HERE"
-    },
-    "items": {
-      "function": "store.rookout.frame.function",
-      "filename": "store.rookout.frame.filename",
-      "line": "store.rookout.frame.line"
-    }
-}
+      {
+        "name": "web_hook",
+        "target": {
+          "url": "https://[SumoEndpoint]/receiver/v1/http/[UniqueHTTPCollectorCode]"
+        },
+        "items": {
+          "function": "store.rookout.frame.function",
+          "filename": "store.rookout.frame.filename",
+          "line": "store.rookout.frame.line",
+          "locals": "store.rookout.frame.locals",
+          "variables": "store.rookout.variables"
+        }
+      }
 ```
 
 ## Troubleshooting
