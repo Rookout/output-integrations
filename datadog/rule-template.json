@@ -1,4 +1,5 @@
 {
+  "template_type": "Custom",
   "appearance": {
     "color": "#6C4296",
     "icon": "fa fa-square-o",
@@ -41,7 +42,7 @@
     "operations": [
       {
         "name": "dogstatsd",
-        "action": "rookout.test.increment",
+        "action": "increment",
         "metric": "increment",
         "value": {
           "name": "calc",

@@ -1,4 +1,5 @@
 {
+  "template_type": "Log",
   "aug": {
     "action": {
       "operations": [
@@ -27,7 +28,7 @@
       {
         "path": "temp.message",
         "name": "format",
-        "format": "{machine.ip}: {store.rookout.frame.filename}@{store.rookout.frame.line}-{store.rookout.frame.function}"
+        "format": "{rook.ip}: {store.rookout.frame.filename}@{store.rookout.frame.line}-{store.rookout.frame.function}"
       },
       {
         "message": "temp.message",
