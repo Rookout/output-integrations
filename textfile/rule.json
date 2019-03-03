@@ -27,7 +27,7 @@
       "sourceRepo": null,
       "lineno": null,
       "sha256": null,
-      "includeExternals": false
+      "includeExternals": null
     },
     "action": {
       "name": "script",
