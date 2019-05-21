@@ -1,0 +1,56 @@
+{
+    "template_type": "Custom",
+    "processing": {
+      "operations": [
+        {
+			"url": "YOUR_URL",
+			"metrics": {
+			  "yourInteger": "store.rookout.frame.yourInteger",
+			  "yourFloat": "store.rookout.frame.yourFloat"
+			},
+			"counters":["my_counter", "another_counter"],
+			"job": "prometheus_job",
+			"name": "prometheus"
+		}
+      ]
+    },
+    "appearance": {
+      "color": "red300",
+      "icon": "icon-prometheus",
+      "title": "Alert to Prometheus"
+    },
+    "aug": {
+      "action": {
+        "operations": [
+          {
+            "name": "set",
+			"paths": {
+				"store.rookout.frame": "frame.dump()",
+				"store.rookout.traceback": "stack.traceback()",
+				"store.rookout.exception.type": "python.exception_type()",
+				"store.rookout.exception.value": "python.exception()",
+				"store.rookout.exception.string": "python.exception_string()"
+			}
+          }
+        ],
+        "name": "script"
+      },
+      "location": {
+        "sha256": null,
+        "lineno": null,
+        "name": "file_line",
+        "filename": null
+      }
+    },
+    "selector": {
+      "operations": [
+        {
+          "path": {
+            "path": "True",
+            "name": "calc"
+          },
+          "name": "return"
+        }
+      ]
+    }
+  }
