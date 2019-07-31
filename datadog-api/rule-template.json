@@ -1,0 +1,72 @@
+{
+  "template_type": "Custom",
+  "appearance": {
+    "color": "#6C4296",
+    "icon": "fa fa-square-o",
+    "title": "DatadogApi Custom Metrics"
+  },
+  "selector": {
+    "operations": [
+      {
+        "name": "return",
+        "path": {
+          "name": "calc",
+          "path": "True"
+        }
+      }
+    ]
+  },
+  "aug": {
+    "location": {
+      "name": "file_line",
+      "filename": null,
+      "lineno": null,
+      "sha256": null
+    },
+    "action": {
+      "name": "script",
+      "operations": [
+        {
+          "name": "set",
+          "paths": {
+            "store.rookout.frame": "frame.dump()",
+            "store.rookout.traceback": "stack.traceback()",
+            "store.rookout.exception.type": "utils.exception()",
+            "store.rookout.exception.value": "utils.exception_type()"
+          }
+        }
+      ]
+    }
+  },
+  "processing": {
+    "operations": [
+      {
+        "name": "datadog",
+        "api_key": "<YOUR-API-KEY>",
+        "metrics": [
+          {
+            "metric": "<METRIC-NAME>",
+            "points": [
+              "<YOUR-INTEGER-VARIABLE>"
+            ],
+            "tags": [
+              "tag1",
+              "tag2"
+            ],
+            "type": "rate"
+          },
+          {
+            "metric": "<METRIC-NAME2>",
+            "points": [
+              "<YOUR-INTEGER-VARIABLE2>"
+            ],
+            "tags": [
+              "tag1"
+            ],
+            "type": "rate"
+          }
+        ]
+      }
+    ]
+  }
+}
