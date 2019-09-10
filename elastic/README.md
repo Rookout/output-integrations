@@ -35,7 +35,6 @@ Rookout sends data to Elastic.
 1. Add the newly created Breakpoint to any application as you would normally !
 
 ### Configuration
-
 Once you added the Breakpoint, you can replace the `hosts` to one or more Elastic hosts
 Change the `items` dictionary to output any information that you need to send
 
@@ -60,6 +59,30 @@ Change the `items` dictionary to output any information that you need to send
       }
     ]
 ```
+
+#### TLS settings (optional)
+```json
+"operations": [
+      {
+        "name": "elastic",
+        "target": {
+          "hosts": [
+            "https://elastic:9200"
+          ],
+          "tlsRootCAFile": "..",
+          "tlsClientCertFile": "..",
+          "tlsClientKeyFile": ".."
+        },
+...
+```
+
+`tlsRootCAFile` - Path to PEM-encoded file containing Root CAs.
+`tlsClientCertFile` - Path to PEM-encoded certificate for client-side TLS
+`tlsClientKeyFile` - Path to PEM-encoded key for client-side TLS
+
+All paths are to local files on the controller system. Client-side TLS and custom root
+certificates are only supported in on-premises deployments.
+
 
 ## Troubleshooting
 If you have any questions, contact us at support@rookout.com.
