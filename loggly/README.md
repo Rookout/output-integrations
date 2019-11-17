@@ -19,49 +19,33 @@ Rookout sends data to Loggly via a HTTP Webhook.
 
 3. Log into [Rookout's webapp][rookout-app-url]
 
-1. In the right panel (Breakpoints) click on the menu button
+1. In the top left corner click on the menu button
 
-    ![Breakpoint actions menu](screenshots/click_rule_action.png)
+    ![Org menu](screenshots/hamburger_click.png)
 
-1. Click on *Create new template* in order to edit a new Breakpoint template
+1. Click on *Targets* in order to open the targets page
 
-    ![Create new template button](screenshots/click_new_template.png)
+    ![Targets page](screenshots/targets_click.png)
 
-1. Copy the Loggly Breakpoint template [available here](rule-template.json) into the editor and replace the default Breakpoint template.
+1. Click on *Add new target* to open the menu and choose *Loggly*
+
+    ![Add new target](screenshots/add_new_target.png)
 
 
-1. Click the save icon to save the template
+1. Fill in your new target's name, your [Loggly Token](loggly-token-docs-url) and click *Add*
 
-    ![Click Save Icon](screenshots/click_save.png)
+    ![Loggly target](screenshots/loggly_new_target.png)
 
-1. Add the newly created Breakpoint to any application as you would normally !
+1. Now you can choose your *Loggly* target when editing a breakpoint.
 
-### Configuration
-
-Once you added the Breakpoint, you can replace the `url` to another Loggly endpoint  
-Change the `items` dictionary to output any information that you need to send
-
-```json
-"operations": [
-      {
-        "name": "web_hook",
-        "target": {
-          "url": "http://logs-01.loggly.com/inputs/<YOUR_TOKEN>/tag/http/"
-        },
-        "items": {
-          "function": "store.rookout.frame.function",
-          "filename": "store.rookout.frame.filename",
-          "line": "store.rookout.frame.line",
-          "locals": "store.rookout.frame.locals",
-          "variables": "store.rookout.variables"
-        }
-      }
-    ]
-```
+  1. To edit your breakpoint click on the *Edit* icon.
+    ![Edit menu](screenshots/bp_edit_menu.png)
+  1. Choose the requested target from the target menu, and click *Set* to save your settings.
+    ![Edit menu](screenshots/choose_target.png)
 
 ## Troubleshooting
-If you have any questions, contact us at support@rookout.com.
-
+1. Once your breakpoint was triggered you will see your data in *Loggly* tagged with the *http* tag.
+1. If you don't see data from Rookout please check that your *Loggly* endpoint is working. See [*Loggly*'s documents](loggly-http-docs-url) for instructions.
 ## Further Reading
 Find out more at [https://docs.rookout.com][rookout-docs]
 
@@ -70,3 +54,4 @@ Find out more at [https://docs.rookout.com][rookout-docs]
 [rookout-docs]: https://docs.rookout.com/
 [rookout-app-url]: https://app.rookout.com
 [loggly-token-docs-url]: https://www.loggly.com/docs/customer-token-authentication-token/
+[loggly-http-docs-url]:https://www.loggly.com/docs/http-endpoint/
