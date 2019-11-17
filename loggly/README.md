@@ -13,7 +13,7 @@ git_integration_title: Rookout
 
 Rookout sends data to Loggly via a HTTP Webhook.
 
-1. Get a Customer Token from Loggly [see their docs](loggly-token-docs-url)
+1. Get a Customer Token from Loggly [see their docs][loggly-token-docs-url]
 
 2. Setup [Rookout][rookout-url]
 
@@ -32,7 +32,7 @@ Rookout sends data to Loggly via a HTTP Webhook.
     ![Add new target](screenshots/add_new_target.png)
 
 
-1. Fill in your new target's name, your [Loggly Token](loggly-token-docs-url) and click *Add*
+1. Fill in your new target's name, your [Loggly Token][loggly-token-docs-url] and click *Add*
 
     ![Loggly target](screenshots/loggly_new_target.png)
 
@@ -45,7 +45,7 @@ Rookout sends data to Loggly via a HTTP Webhook.
 
 ## Troubleshooting
 1. Once your breakpoint was triggered you will see your data in *Loggly* tagged with the *http* tag.
-1. If you don't see data from Rookout please check that your *Loggly* endpoint is working. See [*Loggly*'s documents](loggly-http-docs-url) for instructions.
+1. If you don't see data from Rookout please check that your *Loggly* endpoint is working. See [*Loggly*'s documents][loggly-http-docs-url] for instructions.
 ## Further Reading
 Find out more at [https://docs.rookout.com][rookout-docs]
 
